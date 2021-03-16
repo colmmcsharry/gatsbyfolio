@@ -1,55 +1,46 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import './layout.css';
+import Toggle from 'react-toggle';
+import { ThemeContext } from '../context/themeContext';
+import Navbar from '../components/Navbar.js'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const handleThemeToggle = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
     }
-  `)
+  };
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+
+    <div
+      className={`${
+        theme === 'light' ? 'theme-light' : 'theme-dark'
+      } bg-primary text-main-text text-center transition-all duration-300 m-0 px-0 min-h-screen `}>
+    {/*above is setting all the text colors on both themes so I don't need to */}
+<Navbar/>
+    
+      <Toggle
+        id="theme-toggle"
+        checked={theme === 'light' ? true : false}
+        onChange={handleThemeToggle}
+      />
+      <label htmlFor="theme-toggle">
+      </label>
+      
+      <main>{children}</main>
+     
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
