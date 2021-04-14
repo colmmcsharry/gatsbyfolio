@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import hed from '../images/headshotUpwork.jpg'
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import mesplatter from '../images/medev.png'
