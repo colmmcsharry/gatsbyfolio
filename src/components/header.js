@@ -1,38 +1,38 @@
 import * as React from "react"
+import {useState} from 'react'
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import Navbar from './Navbar.js'
 
-const Header = ({ siteTitle }) => (
-<header bg-black 
-    >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+
+
+function Header(props) {
+
+return (
+    <>
+ <Navbar/>
+<section className="relative">
+
+    <div className="relative top-20">
+        
+        <div className="absolute inline text-3xl xl:text-7xl filter hover:brightness-125 logo "> Desi<span className="gletter">g</span>n<span className="rletter">er    </span></div>
+        <code className="absolute inline text-2xl text-green-300 xl:text-6xl dev filter hover:brightness-125"> Dev<span className="text-white">elo</span><span className="text-red-300">per    </span></code>
+
+        <StaticImage
+            src="../images/mesplatter.png"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF",]}
+            alt="A Gatsby astronaut"
+            className="w-4/5 mx-auto"  
+            />
     </div>
-  </header>
+
+</section>
+</>
+
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+  
+  export default Header

@@ -36,17 +36,35 @@ export default class Navbar extends React.Component {
 
 
   render () {
-    // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
+ 
     return (
-      <Menu right
+      <>
+      <div id="largenav" className="fixed block w-screen h-16 pt-5 text-right "> 
+      <ul className= "hidden mr-20 space-x-10 text-cyan-heading lg:inline" >
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink></li>
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink></li>
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink></li>
+      </ul>
+      </div>
+    
+        
+         
+
+
+      <Menu
+      right
+      width={ 220 }
           isOpen={this.state.menuOpen}
           onStateChange={(state) => this.handleStateChange(state)}
         >
         <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink>
-        <a id="about" className="menu-item" href="/about">About</a>
-        <a id="contact" className="menu-item" href="/contact">Contact</a>
+        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink>
+        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink>
         <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
       </Menu>
+
+
+</>
     );
   }
 }
