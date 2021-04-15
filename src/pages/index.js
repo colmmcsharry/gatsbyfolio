@@ -22,7 +22,7 @@ function IndexPage() {
   return (
   <Layout>
     <SEO title="Home" />
-
+<Topsection />
 
 
 <Headerold />
