@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Toggle from 'react-toggle';
 import { ThemeContext } from '../context/themeContext';
-import Navbar from '../components/Navbar.js'
+
 
 const Layout = ({ children }) => {
   const { theme, setTheme } = useContext(ThemeContext);
