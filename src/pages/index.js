@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from '../components/Navbar.js'
-import Header from '../components/Header.js'
+import Topsection from '../components/Topsection.js'
 import Headerold from '../components/Headerold.js'
 import {useState} from 'react'
 import ModalExamplePage from './modal-example.js'
