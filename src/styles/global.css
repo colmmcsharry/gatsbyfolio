@@ -101,12 +101,13 @@ h2 {color:var(--mycyan)
   --navcol: rgba(51, 51, 51, 0.616);
 }
 
+/* css variable is causing the others to flicker for some reason, might have to just make the others be divs with images inside */
 .varbg{
-  background-image:url('../images/coldesign.png'), url('../images/code.png'),var(--background);
-  background-size:40vw 40vh, 45vw 50vh, contain;
-  background-position:1px 1px,right 1%, center center;
+  background-image:var(--background);
+  background-size:contain;
+  background-position:center center;
   background-repeat:no-repeat;
-  background-attachment:scroll,scroll, fixed;
+  background-attachment:fixed;
 }
 
 
@@ -132,6 +133,9 @@ h2 {color:var(--mycyan)
   background-color:var(--navcol) ; */
  }
 
+ .testimg {
+   width:33vw;
+ }
 
 
 .ReactModal__Overlay {

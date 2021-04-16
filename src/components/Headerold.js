@@ -35,7 +35,7 @@ return (
 
 <StaticImage
       src="../images/mecartoon.png"
-      quality={95}
+      quality={5}
       formats={["AUTO", "WEBP", "AVIF",]}
       alt="A Gatsby astronaut"
       className= {isDisplay ? "disappear" : "block mecartoon "  }  
