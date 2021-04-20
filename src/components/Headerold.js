@@ -24,44 +24,9 @@ return (
 
 <section>
  
-  <div className="relative block mb-40 top-28 2xl:text-lg">
-  Hi, I'm Colm...</div>
+<div className="relative grid grid-cols-1 gap-36 place-items-center xl:grid-cols-2 xl:px-24 2xl:gap-20 2xl:px-40 2xl:text-lg ">
 
-
-<div className="relative grid grid-cols-1 place-items-center xl:grid-cols-2 xl:px-24 2xl:gap-20 2xl:px-40 2xl:text-lg ">
-  
-  {/*the left/top of the two container divs */}
-<div className="relative grid w-10/12 cursor-pointer afterclass place-items-center center md:w-8/12 ">
-
-<StaticImage
-      src="../images/mecartoon.png"
-      quality={5}
-      formats={["AUTO", "WEBP", "AVIF",]}
-      alt="A Gatsby astronaut"
-      className= {isDisplay ? "disappear" : "block mecartoon "  }  
-      onClick={() => {
-        setTimeout(play, 1000);
-        setIsDisplay( true);
-      }}
-    />
-
-
-
-<div id="flash" className={isDisplay ? "flashy disappear absolute right-2 z-10 " : "smol"} ></div>
-
-   <div className={isDisplay ?  "absolute p-2 w-10/12 mx-10 z-10 my-0 transform bg-white shadow-2xl photoframe filter-grayscale  lg:p-3 hover:filter-none hover:rotate-0 hover:scale-125 hover:shadow-sm"  : "hidden"}>
-    <StaticImage
-      src="../images/me-insta.jpg"
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF", "JPEG"]}
-      alt="me at work"
-    />
-    <div id="caption" className="text-xl text-gray-500 font-extralight"> Me at work </div>
-    </div>
-</div>
-{/* left side ends */}
-
-    <div className="p-6 leading-relaxed text-left pt-28 m-top-6 max-w-prose"> 
+<div className="p-6 leading-relaxed text-left pt-28 m-top-6 max-w-prose"> 
      <p>Welcome and thanks for checking out my portfolio.</p> <br/>
                  <p> I strive to create beautiful web apps with an emphasis on a quality user experience.
                   I am currently looking for a role with a company where I can continue to grow and learn. I am equally comfortable working alone or with a team.</p> 
@@ -121,6 +86,40 @@ return (
 
              
     </div>
+
+
+  
+  {/*the left/top of the two container divs */}
+<div className="relative grid w-10/12 cursor-pointer afterclass place-items-center center md:w-8/12 ">
+
+<StaticImage
+      src="../images/mecartoon.png"
+      quality={80}
+      formats={["AUTO", "WEBP", "AVIF",]}
+      alt="A Gatsby astronaut"
+      className= {isDisplay ? "disappear" : "block mecartoon "  }  
+      onClick={() => {
+        setTimeout(play, 1000);
+        setIsDisplay( true);
+      }}
+    />
+
+
+
+<div id="flash" className={isDisplay ? "flashy disappear absolute right-2 z-10 " : "smol"} ></div>
+
+   <div className={isDisplay ?  "absolute p-2 w-10/12 mx-10 z-10 my-0 transform bg-white shadow-2xl photoframe filter-grayscale  lg:p-3 hover:filter-none hover:rotate-0 hover:scale-125 hover:shadow-sm"  : "hidden"}>
+    <StaticImage
+      src="../images/me-insta.jpg"
+      quality={95}
+      formats={["AUTO", "WEBP", "AVIF", "JPEG"]}
+      alt="me at work"
+    />
+    <div id="caption" className="text-xl text-gray-500 font-extralight"> Hello again &#9786;  </div>
+    </div>
+</div>
+{/* left side ends */}
+
 
 
     

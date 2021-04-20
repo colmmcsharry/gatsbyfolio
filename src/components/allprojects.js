@@ -14,6 +14,8 @@ export default function AllProjects(){
 
         <>
 
+        <h2 className="text-6xl">Projects</h2>
+
 <Project description={<p>I made this site for a small construction company in Vancouver. 
                    I replaced their old Wordpress site with a more modern
                    version using Gatsby.js.<br/><br/>

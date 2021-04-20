@@ -133,9 +133,6 @@ h2 {color:var(--mycyan)
   background-color:var(--navcol) ; */
  }
 
- .testimg {
-   width:33vw;
- }
 
 
 .ReactModal__Overlay {
@@ -240,10 +237,8 @@ width:10px;
 }
 
 .afterclass:after {
-  content:"click me";
+  content:"Click Me";
   position:relative;
-  font-size:14px;
-  color:var(--cyan-heading);
   z-index: 1;
 }
 
@@ -478,15 +473,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 
 
-
-
+.myhead {
+  bottom: -5px;
+}
+.bordbot {border-bottom: 1px solid rgba(61, 192, 176, .3)}
 
 
 /* Dev word */
 .dev {
-top: 40%;
-right:5%;
+bottom: 50%;
+left:5%;
 }
+
+
 
 /* Dev word */
 
@@ -495,12 +494,14 @@ right:5%;
 
 .logo {
    user-select: none;
-   top: 40%;
-left:5%;
+   bottom: 50%;
+right:8%;
    font-family:"Vibur" !important;
    color: var(--big-heading-inner);
    text-shadow: 0 -1px 40px, 0 0 2px, 0 0 1em var(--big-heading), 0 0 0.5em var(--big-heading), 0 0 0.1em var(--big-heading), 0 10px 3px #000;
 }
+
+
 
 
 .gletter{
@@ -706,8 +707,111 @@ left:5%;
 
   /* Devices ends */
 
-
+/* this is just for the icons */
  img {
     height:2rem;
     width:2rem;
+  }
+
+
+
+
+  .fadein {
+    opacity:0;
+    animation: fadein 2s ease 2.5s forwards;
+  }
+
+  @keyframes fadein {
+    to {
+      opacity:1;
+    }
+  }
+
+
+
+  /* TYPEWRITER BEGINS */
+
+  .main-container {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+   position:relative;
+   top:5rem;
+  }
+  
+  .typewriter-text {
+    overflow: hidden;
+    position: relative;
+    width: 4ch;
+    font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+  
+    animation: typewriter 1.2s steps(28) .5s 1 normal both,
+    blinkTextCursor 800ms steps(28) 8 forwards;
+  
+  }
+  
+  
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 13ch;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+  
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+  
+    to {
+      border-right-color: transparent;
+    }
+  
+  }
+
+  /* TYPEWRITER ENDS */
+
+
+  @media only screen and (min-width: 1270px) {
+
+    .dev:after {
+      content:"front end dev who likes to do my best front end dev who likes to do my best";
+      font-size:1rem;
+      font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+      width:300px;
+      text-align:left;
+      display:block;
+      position:absolute;
+      color:var(--text-main);
+      margin:0 auto;
+      top:80px;
+    }
+    
+    /* Dev word */
+    
+    
+    .logo:after {
+      content:"front end dev who likes to do my best front end dev who likes to do my best";
+    font-family:ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+      font-size:1rem;
+      width:250px;
+      text-align:left;
+      display:block;
+      position:absolute;
+      color:var(--text-main);
+      animation:none;
+      margin:0 auto;
+      text-shadow: none;
+      top:90px;
+    }
   }
