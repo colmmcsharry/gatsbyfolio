@@ -8,7 +8,7 @@ export default function Project(props){
 
     return (
 
-        <div id="projwrap">
+        <div id="projwrap" className= "mb-20 xl:mb-32">
 
   
         <a className="projlink" href={props.link} target="_blank" rel="noreferrer"><h3 className="projtitle">{props.title}</h3></a>

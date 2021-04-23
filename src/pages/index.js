@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Contact from '../components/Contact.js'
 import Navbar from '../components/Navbar.js'
 import Topsection from '../components/Topsection.js'
 import Headerold from '../components/Headerold.js'
@@ -29,9 +30,10 @@ function IndexPage() {
   
 
 
-<br/><br/><br/>
 <AllProjects/>
  
+<Contact />
+
  <Link to='/modal-example/'
   state={{
     modal: true

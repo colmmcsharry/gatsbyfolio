@@ -41,9 +41,9 @@ export default class Navbar extends React.Component {
       <>
       <div id="largenav" className="fixed block w-screen h-16 pt-5 text-right "> 
       <ul className= "hidden mr-20 space-x-10 text-cyan-heading lg:inline" >
-        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink></li>
-        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink></li>
-        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink></li>
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink className="menu-item" to="oldsection" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink></li>
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink className="menu-item" to="projsection" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink></li>
+        <li className="inline cursor-pointer hover:filter-brighten">  <ScrollLink className="menu-item" to="Contact" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink></li>
       </ul>
       </div>
     
@@ -57,10 +57,10 @@ export default class Navbar extends React.Component {
           isOpen={this.state.menuOpen}
           onStateChange={(state) => this.handleStateChange(state)}
         >
-        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink>
-        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink>
-        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="About" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink>
-        <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="oldsection" spy={true} offset={-20} smooth={true} duration={900}> About </ScrollLink>
+        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="projsection" spy={true} offset={-20} smooth={true} duration={900}> Projects </ScrollLink>
+        <ScrollLink onClick={() => this.closeMenu()} className="menu-item" to="Contact" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink>
+        
       </Menu>
 
 

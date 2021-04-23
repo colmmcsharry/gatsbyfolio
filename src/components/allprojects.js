@@ -12,11 +12,20 @@ export default function AllProjects(){
 
     return (
 
-        <>
+        <section id="projsection" className="relative pt-40 mb-40 ">
 
-        <h2 className="text-6xl">Projects</h2>
 
-<Project description={<p>I made this site for a small construction company in Vancouver. 
+
+
+<h2 className="mb-20 seper xl:mb-40 xl:text-6xl">Projects</h2>
+        
+        
+        <h3 className="font-semibold xl:text-3xl text-main-text">Crezo Construction</h3>
+
+        
+<Project description={
+
+<p>I made this site for a small construction company in Vancouver. 
                    I replaced their old Wordpress site with a more modern
                    version using Gatsby.js.<br/><br/>
 
@@ -44,7 +53,7 @@ Click Here
 
 
                       
- <br/><br/>
+ <h3 className="font-semibold xl:text-3xl text-main-text">Cosy Cabins</h3>
  <Project description={
 
 <p>This is a mock-up website for my brother's company. The company is a bit like Air BnB, but specialises in off-the-grid cabins.
@@ -66,6 +75,7 @@ Click Here
 
  } image1={crezo1} image2={crezo2} image3={crezo3} image4={crezo4} />
 
+ <h3 className="font-semibold xl:text-3xl text-main-text">Networkers</h3>
 
  <Project description={<p>Networkers is a site for finding skilled workers, fast.<br/>
                   <br/>It's almost like Tinder, except instead of swiping through dates
@@ -82,7 +92,7 @@ Click Here
 
 
 
-</>
+                    </section>
 
     )
 

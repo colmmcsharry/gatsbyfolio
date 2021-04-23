@@ -11,7 +11,7 @@ function Topsection(props) {
 return (
     <>
  <Navbar/>
- <section className="relative">
+ <section className="relative topsec">
 
  <div className="main-container">
       <div className="typewriter-text xl:text-xl">
@@ -21,16 +21,15 @@ return (
 
 
 
-<div className="relative bordbot top-20 fadein">
+<div className="relative top-20 fadein">
   
     
 
+<code className="absolute inline text-xl text-green-300 xl:text-6xl dev filter hover:brightness-125"> Dev<span className="text-white">elo</span><span className="text-yellow-300">per    </span></code>
 
-
-
-    <div className="absolute inline text-2xl xl:text-7xl filter hover:brightness-125 logo "> Desi<span className="gletter">g</span>n<span className="rletter">er    </span></div>
+<div className="absolute inline text-2xl xl:text-7xl filter hover:brightness-125 logo "> Desi<span className="gletter">g</span>n<span className="rletter">er    </span></div>
   
-    <code className="absolute inline text-xl text-green-300 xl:text-6xl dev filter hover:brightness-125"> Dev<span className="text-white">elo</span><span className="text-red-300">per    </span></code>
+
   
 
     <StaticImage
@@ -38,11 +37,14 @@ return (
         quality={80}
         formats={["AUTO", "WEBP", "AVIF",]}
         alt="my head"
-        className="w-7/12 mx-auto lg:w-5/12 myhead"  
+        className="w-7/12 mx-auto lg:w-5/12 -bottom-1.5 myhead"  
         />
+        <div className="firstseper seper "> {"         "}         </div>
 </div>
 
+
 </section>
+
 </>
 
 )
