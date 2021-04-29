@@ -31,11 +31,7 @@ export default function Contact()  {
           
             <h2 className="relative mt-10 mb-40 seper xl:text-6xl top-20">Contact</h2> 
 
-            {success && (
-  <p style={{ color: 'green'}}>
-    Thanks for the mail, excited to read it!
-  </p>
-)}
+        
             
           
 
