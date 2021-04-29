@@ -73,7 +73,7 @@ useEffect(() => {
             </ul>
 
           
-            <form method="post" id="contactform" name="contactform" data-netlify="true" action="https://colmsportfolio.netlify.app/?success=true">
+            <form method="post" id="contactform" name="contactform" data-netlify="true" action="https://gatsbyfolio50612.gtsb.io/?success=true">
              
             <div>
               <label className="contactlabel">
