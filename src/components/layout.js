@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       setTheme('dark');
     } else {
       setTheme('light');
-      console.log('now ots light');
+      
     }
   };
 

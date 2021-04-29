@@ -11,20 +11,6 @@ export default function Contact()  {
 
 
 
-
-const [success, setSuccess] = useState(false);
-
-useEffect(() => {
-  if ( window.location.search.includes('success=true') ) {
-    setSuccess(true);
-    console.log('cheers!')
-    document.getElementById('Contact').scrollIntoView()
-
-
-  }
-}, []);
-
-
     return (
     
       <React.Fragment>
@@ -73,14 +59,14 @@ useEffect(() => {
             </ul>
 
           
-            <form method="post" id="contactform" name="contactform" data-netlify="true" action="https://gatsbyfolio50612.gtsb.io/?success=true">
+            <form method="post" name="contactform" action={`https://formspree.io/f/xleowbpw`}>
              
             <div>
               <label className="contactlabel">
                 Your Name: <input type="text" name="name" required />
               </label>
             </div>
-            <input type="hidden" name="form-name" value="contactform" />
+            
             <div>
               <label className="contactlabel">
                 Your Email: <input type="email" name="email" required />

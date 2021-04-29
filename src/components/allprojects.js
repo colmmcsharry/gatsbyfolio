@@ -12,6 +12,7 @@ export default function AllProjects(){
 
     return (
 
+        
         <section id="projsection" className="relative pt-40 mb-40 ">
 
 
