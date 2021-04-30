@@ -50,13 +50,13 @@ margin:0 auto;
 
 
 body {
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
 }
 
 /* accessibility thing */
 
 *:focus-visible {
-  outline: 4px dashed black;
+  outline: 1px dashed grey;
 }
   
 /* Focusing the button with a mouse, touch, or stylus will show a subtle drop shadow. */
@@ -163,12 +163,15 @@ h2 {color:var(--mycyan)
 
 .theme-light {
   --primary: #f8f8f8;
-  --background:  linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-  --projbj:white;
+  --background: white;
+  --projbj:#dbe1e8;
   --secondary: #dbe1e8;
   --text-main: #0d0106;
+  --dev:#333; 
+  --elo:#333;
+  --per:#333; 
   --big-heading-inner: #333;
-  --wavecol:white;
+  --wavecol:#dbe1e8;
 --big-heading: none;
   --cyan-heading:#333;
   --theanim: none;
@@ -177,12 +180,15 @@ h2 {color:var(--mycyan)
 }
 .theme-dark {
   --primary: #333;
-  --background: linear-gradient(to bottom, #232526, #414345);
-  --projbj:linear-gradient( #414345, #232526,#414345);
+  --background: #333333;
+  --projbj:#404243;
+  --dev:#6EE7B7;
+  --elo:#eaeaea;
+  --per:#FAD34C;
   --secondary: #2a2e35;
   --text-main: #eaeaea;
   --big-heading-inner: white;
-  --wavecol:#414345;
+  --wavecol:#404243;
   --big-heading: rgb(61, 192, 176);
   --cyan-heading: rgb(61, 192, 176);
   --theanim: blink linear infinite;
@@ -191,11 +197,7 @@ h2 {color:var(--mycyan)
 
 /* css variable is causing the others to flicker for some reason, might have to just make the others be divs with images inside */
 .varbg{
-  background-image:var(--background);
-  background-size:contain;
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-attachment:fixed;
+  background-color:var(--background);
 }
 
 
@@ -214,14 +216,43 @@ h2 {color:var(--mycyan)
   }
 }
 
-#largenav {background: transparent;
+#largenav {background-image:linear-gradient( var(--background) 45%, transparent);
   z-index:5;
-  /* 
-  
-  border-bottom: 1px dashed var(--navcol);
-   backdrop-filter:blur(3px);
-  background-color:var(--navcol) ; */
+
  }
+
+
+ .myhead {
+  transition: .5s ease;
+  cursor:url(../images/wand.png),default;
+  clip-path: polygon(100% 100%, 100% 81%, 92% 70%, 93% 25%, 76% 13%, 54% 0, 33% 25%, 31% 67%, 4% 100%);
+}
+
+
+
+  #logo:hover {
+      -webkit-animation: rainbow 1s steps(36) infinite !important;
+    }
+    
+    @-webkit-keyframes rainbow {
+       from { -webkit-filter:hue-rotate(10deg); }
+         to { -webkit-filter:hue-rotate(360deg); }
+    }
+    
+    @keyframes rainbow {
+     from {
+        -webkit-filter:hue-rotate(10deg);
+                filter:hue-rotate(10deg);
+        }
+      to {
+        -webkit-filter:hue-rotate(360deg);
+                filter:hue-rotate(360deg);
+        }
+    }
+
+
+
+
 
 
 
@@ -576,7 +607,8 @@ width:10px;
   
 
 
-
+  #Dev {color:var(--dev)}
+  #Per {color:var(--per)}
 
 
 
@@ -679,13 +711,23 @@ left:5%;
 
 
 
-/* Dev word */
+/* Dev word ends */
 
+
+.righthalf {cursor:url('../images/wand.png'), default !important;
+  z-index:1;
+}
+
+.righthalf:focus {
+  cursor:grabbing
+}
 
 /* Neon heading begins */
 
-.logo {
+#logo {
    user-select: none;
+   cursor:url('../images/wand.png'), default !important;
+   z-index:23;
    bottom: 50%;
 right:8%;
    font-family:"Vibur" !important;
@@ -703,7 +745,9 @@ right:8%;
   animation: var(--theanim) 7s;
 }
 
-
+.navitem:hover {
+  text-shadow: 0 -1px 40px, 0 0 2px, 0 0 1em var(--big-heading), 0 0 0.5em var(--big-heading), 0 0 0.1em var(--big-heading), 0 10px 3px #000;
+}
 
 
 
@@ -970,6 +1014,11 @@ right:8%;
   /* TYPEWRITER ENDS */
 
 
+   #elo {
+    color: var(--elo);
+
+  }
+
 /* cool seperator begins */
 
 .seper {
@@ -1059,7 +1108,7 @@ right:8%;
     /* Dev word */
     
     
-    .logo:after {
+    #logo:after {
       content:"I enjoy the creative/artistic side of web design and staying on top of the latest trends and CSS advancements.";
     font-family:ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
       font-size:.9rem;

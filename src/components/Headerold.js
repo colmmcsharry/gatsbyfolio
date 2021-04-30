@@ -2,7 +2,7 @@ import React from "react"
 import {useState} from 'react'
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
-import useSound from 'use-sound';
+// import useSound from 'use-sound';
 import shutter from '../sounds/shutter.mp3';
 import mecartoon from '../images/mecartoon.png'
 import iconjs from '../images/icon-js.svg'
@@ -19,11 +19,11 @@ import { Link as ScrollLink } from 'react-scroll'
 function Headerold(props) {
 
   const [isDisplay, setIsDisplay] = useState(false) ; 
-  const [play] = useSound(shutter);
+  // const [play] = useSound(shutter);
 
 return (
 
-<section id="oldsection" className="relative">
+<section id="oldsection" className="relative oldsec">
 
 
 
@@ -38,7 +38,6 @@ return (
                   
                   <p>When I'm not coding I enjoy sports, photography,
                   music festivals and nights in or out with friends.
-                  <ScrollLink to="projsection" spy={true} offset={-20} smooth={true} duration={900}> Contact </ScrollLink>
                    </p>
 
                   
@@ -106,7 +105,7 @@ return (
       alt="A Gatsby astronaut"
       className= {isDisplay ? "disappear" : "block mecartoon "  }  
       onClick={() => {
-        setTimeout(play, 1000);
+        // setTimeout(play, 1000);
         setIsDisplay( true);
       }}
     />

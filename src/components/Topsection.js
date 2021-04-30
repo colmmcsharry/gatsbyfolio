@@ -3,6 +3,7 @@ import {useState} from 'react'
 import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import Navbar from './Navbar.js'
+import MouseParticles from 'react-mouse-particles'
 
 
 
@@ -11,24 +12,28 @@ function Topsection(props) {
 return (
     <>
  <Navbar/>
+ <MouseParticles g={1} color="random" cull="oldsec,lefthalf,grid,blurb,allproj,contactwrap,navclass,lightswitch" />
+
+
  <section className="relative topsec">
+<div className="absolute left-0 z-10 w-6/12 h-screen lefthalf"></div>
 
  <div className="main-container">
-      <div className="typewriter-text xl:text-xl">
+      <div className="text-green-500 typewriter-text xl:text-xl">
         Hi, I'm Colm
       </div>
     </div>
 
-
+    
 
 <div className="relative top-20 fadein">
   
     
 
-<code className="absolute inline text-xl text-green-300 xl:text-6xl dev filter hover:brightness-125"> Dev<span className="text-white">elo</span><span className="text-yellow-300">per    </span></code>
+<code id="Dev" className="absolute inline text-xl dev xl:text-6xl filter hover:brightness-125"> Dev<span id="elo">elo</span><span id="Per">per    </span></code>
 
-<div className="absolute inline text-2xl xl:text-7xl filter hover:brightness-125 logo "> Desi<span className="gletter">g</span>n<span className="rletter">er    </span></div>
-  
+<div id="logo" className="absolute inline text-2xl logoclass xl:text-7xl "> Desi<span className="gletter">g</span>n<span className="rletter">er    </span></div>
+<div className="absolute right-0 w-6/12 h-screen righthalf"></div>  
 
   
 
@@ -37,7 +42,7 @@ return (
         quality={80}
         formats={["AUTO", "WEBP", "AVIF",]}
         alt="my head"
-        className="w-7/12 mx-auto lg:w-5/12 -bottom-1.5 myhead"  
+        className="w-7/12 mx-auto z-20 lg:w-5/12 outline-white -bottom-1.5 myhead lg:filter lg:filter-grayscale hover:filter-none"  
         />
         <div className="firstseper seper "> {"         "}         </div>
 </div>

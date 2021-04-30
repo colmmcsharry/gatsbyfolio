@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     
       <Toggle
         id="theme-toggle"
-        className="z-30"
+        className="z-30 lightswitch"
         checked={theme === 'light' ? true : false}
         onChange={handleThemeToggle}
       />
